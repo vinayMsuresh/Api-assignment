@@ -1,0 +1,40 @@
+---> API
+    It stand for application programming interface, it is a software interface that allows two
+    applications to interact with each other without any intervention.
+    It is a collection of functions. It is a code that can be accessed or executed.
+    -> It helps to different softwares to communicate and exchange data with each other.
+
+
+    -->Web APIs 
+    ->Server side APIs:- JSON or XML
+    ->Client side APIs:- extend functionality within a web browser or HTTP client.
+        ->examples
+            ->Google Map API
+            -> Youtube API
+    -> API Testing tools
+        ->Postman, vRest, ping-api 
+
+    -> Soap and Rest API
+        SOAP:- Simple Object Access Protocol
+        REST:- Representational State Tranfer
+
+    --> Differences
+    -> Soap api has an official standard because it is a Protocol while REST  api
+    has no official standard (it is an architectural style).
+    -> Soap uses only HTTP and XML while REST uses HTTP, JSON, XML, URL for data communication and Tranfer.
+
+    -> express js we can define routes as a api
+    app.METHOD(url, callback)
+        -> methods:- get, post, put, delete
+
+    app.get("/api/getdata",(req, res)=>{
+        res.status(200).json({'empdata':[]});
+    }) 
+
+    async function deletePost(id){
+        await postModel.deleteOne({_id:id}, )
+    }
+    app.delete('/:id',async(req, res)=>{
+        await deletePost(req.params.id);
+        res.json({'msg': 'deleted'})
+    })
